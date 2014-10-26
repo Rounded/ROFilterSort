@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'ROFilterSort', :exclusive => true do
+  pod "ROFilterSort", :path => "../"
+end
+
+target 'Tests', :exclusive => true do
+  pod "ROFilterSort", :path => "../"
+
+  
+end
