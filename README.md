@@ -11,6 +11,12 @@ ROFilterSort is an easy-to-use framework that allows users to filter a given scr
 
 For example, if you have a list of wines in a `UITableView` you can easily view how the wines are sorted alphabetically and filtered by "red" wine. If you'd like to change the filters, you launch the `ROFilterSortView` and click enable the "red" "white" and "sparkling" filters while also sorting by "year."
 
+## To do
+
+* Need to come up with better naming conventions. Right now they are incredibly verbose.. Maybe something like, `ROFilterSort`, `ROFilterSort.bar` and `ROFilterSort.popupView`.
+
+* Add credit for PureLayout, Pop, RSNSMutableIndexSetMake.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.

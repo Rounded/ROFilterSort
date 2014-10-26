@@ -70,7 +70,7 @@
     ROFilterCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FilterCollectionViewCell" forIndexPath:indexPath];
     
     cell.titleLabel.text = self.filterButtonTitles[indexPath.row];
-    cell.checkBox.image = [self.filterButtonSelectedIndexesTemp containsIndex:indexPath.row] ? [UIImage imageNamed:@"checked"] : [UIImage imageNamed:@"unchecked"];
+    cell.checkBox.image = [self.filterButtonSelectedIndexesTemp containsIndex:indexPath.row] ? [UIImage imageNamed:@"ROFilterSort.bundle/checked"] : [UIImage imageNamed:@"ROFilterSort.bundle/unchecked"];
     
     cell.checkBox.alpha = self.disableFilterButtons==1 ? 0.4 : 1.0;
     cell.titleLabel.alpha = self.disableFilterButtons==1 ? 0.4 : 1.0;

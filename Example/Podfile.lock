@@ -1,11 +1,15 @@
 PODS:
   - pop (1.0.7)
   - PureLayout (2.0.1)
+  - ROCardToss (1.0.2):
+    - pop
+    - PureLayout
   - ROFilterSort (1.0.0):
     - pop
     - PureLayout
 
 DEPENDENCIES:
+  - ROCardToss
   - ROFilterSort (from `../`)
 
 EXTERNAL SOURCES:
@@ -15,6 +19,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   pop: 2f14a1ea61339767af9e66741b418c831b3844df
   PureLayout: 12eca5b6dc94f1a03fdf255d640604584ff1b55b
+  ROCardToss: aa22e629a2fe6d31d4d16d8e3908a8bf5212b5f3
   ROFilterSort: 681575caf51caac8e393f22fd4b57719bf32389b
 
 COCOAPODS: 0.34.4
