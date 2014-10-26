@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint ROCardToss.podspec' to ensure this is a
+# Be sure to run `pod lib lint ROFilterSort.podspec' to ensure this is a
 # valid spec and remove all comments before submitting the spec.
 #
 # Any lines starting with a # are optional, but encouraged
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes'
   s.resource_bundles = {
-    'ROCardToss' => ['Pod/Assets/*.png']
+    'ROFilterSort' => ['Pod/Assets/*.png']
   }
 
   s.dependency 'pop'
