@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ROFilterSort"
-  s.version          = "1.0.0"
+  s.version          = "1.0.1"
   s.summary          = "ROFilterSort includes a filter bar and popup view to sort / filter various options on the screen."
   s.description      = <<-DESC
                        ROFilterSort is an easy-to-use framework that allows users to filter a given screen via a segment control and filter buttons. The ROFilterBar shows the currently selected filters, and launching the ROFilterSortView displays the different filters that can be applied. 
