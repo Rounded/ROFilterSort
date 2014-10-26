@@ -5,6 +5,12 @@
 [![License](https://img.shields.io/cocoapods/l/ROFilterSort.svg?style=flat)](http://cocoadocs.org/docsets/ROFilterSort)
 [![Platform](https://img.shields.io/cocoapods/p/ROFilterSort.svg?style=flat)](http://cocoadocs.org/docsets/ROFilterSort)
 
+ROFilterSort is part of the Rounded UI Kit framework. Other notable pieces of the framework are the ROCardToss and ROTranslucentView.
+
+ROFilterSort is an easy-to-use framework that allows users to filter a given screen via a segment control and filter buttons. The ROFilterBar shows the currently selected filters, and launching the ROFilterView displays the different filters that can be applied. 
+
+For example, if you have a list of wines in a `UITableView` you can easily view how the wines are sorted alphabetically and filtered by "red" wine. If you'd like to change the filters, you launch the `ROFilterSortView` and click enable the "red" "white" and "sparkling" filters while also sorting by "year."
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
@@ -20,7 +26,7 @@ it, simply add the following line to your Podfile:
 
 ## Author
 
-Brian Weinreich, be.weinreich@gmail.com
+Brian Weinreich at Rounded, bw@roundedco.com
 
 ## License
 

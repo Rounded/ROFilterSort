@@ -1,0 +1,14 @@
+PODS:
+  - ROFilterSort (0.1.0)
+
+DEPENDENCIES:
+  - ROFilterSort (from `../`)
+
+EXTERNAL SOURCES:
+  ROFilterSort:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ROFilterSort: a639a3e28f72fcf0cbe079b0338726c6524314da
+
+COCOAPODS: 0.34.4
