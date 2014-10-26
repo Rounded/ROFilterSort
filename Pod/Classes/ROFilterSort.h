@@ -10,19 +10,19 @@
 #import "ROFilterSortBar.h"
 #import "ROFilterSortView.h"
 
-@protocol ROFilterDelegate
+@protocol ROFilterSortDelegate
 
 - (void)applyFiltersButtonPressed;
-- (void)showFilterViewButtonPressed;
+- (void)showFilterSortViewButtonPressed;
 
 @end
 
-@interface ROFilter : UIViewController
+@interface ROFilterSort : UIViewController
 
-@property (nonatomic, assign) id <ROFilterDelegate> delegate;
+@property (nonatomic, assign) id <ROFilterSortDelegate> delegate;
 
 // The Views
-@property (strong, nonatomic) ROFilterView *filterView;
+@property (strong, nonatomic) ROFilterSortView *filterSortView;
 @property (strong, nonatomic) ROFilterSortBar *filterSortBar;
 
 // The Data

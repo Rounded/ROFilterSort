@@ -9,6 +9,7 @@
 #import "ROFilterSort.h"
 #import "ROFilterCollectionViewCell.h"
 #import <POP.h>
+#import <PureLayout.h>
 
 @interface ROFilterSort () <ROFilterSortBarDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -28,7 +29,7 @@
 
 - (void)styleView
 {
-    [self.filterView.collectionView autoSetDimension:ALDimensionHeight toSize:35*((self.filterButtonTitles.count+2-1)/2)];
+    [self.filterSortView.collectionView autoSetDimension:ALDimensionHeight toSize:35*((self.filterButtonTitles.count+2-1)/2)];
 }
 
 
@@ -49,11 +50,11 @@
     self.segmentedControlSelectedIndex = selectedIndex;
     self.segmentedControlSelectedIndexTemp = selectedIndex;
     
-    [self.filterView.segmentedControl removeAllSegments];
+    [self.filterSortView.segmentedControl removeAllSegments];
     [self.segmentedControlTitles enumerateObjectsUsingBlock:^(NSString *title, NSUInteger idx, BOOL *stop) {
-        [self.filterView.segmentedControl insertSegmentWithTitle:title atIndex:idx animated:NO];
+        [self.filterSortView.segmentedControl insertSegmentWithTitle:title atIndex:idx animated:NO];
     }];
-    [self.filterView.segmentedControl setSelectedSegmentIndex:self.segmentedControlSelectedIndexTemp];
+    [self.filterSortView.segmentedControl setSelectedSegmentIndex:self.segmentedControlSelectedIndexTemp];
     [self.filterSortBar refresh];
 }
 
@@ -99,17 +100,17 @@
                 [self.filterButtonSelectedIndexesTemp addIndex:indexPath.row];
             }
         }
-        [self.filterView.collectionView reloadData];
+        [self.filterSortView.collectionView reloadData];
     }
 }
 
 
 #pragma mark - Actions
 
-- (void)showFilterViewButtonPressed
+- (void)showFilterSortViewButtonPressed
 {
-    [self.filterView.collectionView reloadData];
-    [self.delegate showFilterViewButtonPressed];
+    [self.filterSortView.collectionView reloadData];
+    [self.delegate showFilterSortViewButtonPressed];
 }
 
 - (void)applyFilters
@@ -122,7 +123,7 @@
 
 - (void)segmentChanged
 {
-    self.segmentedControlSelectedIndexTemp = self.filterView.segmentedControl.selectedSegmentIndex;
+    self.segmentedControlSelectedIndexTemp = self.filterSortView.segmentedControl.selectedSegmentIndex;
 }
 
 #pragma mark - Getters
@@ -145,27 +146,27 @@
     return _filterButtonSelectedIndexesTemp;
 }
 
-- (ROFilterSort *)filterSortBar
+- (ROFilterSortBar *)filterSortBar
 {
     if (!_filterSortBar) {
-        _filterSortBar = [[ROFilterSort alloc] initForAutoLayout];
+        _filterSortBar = [[ROFilterSortBar alloc] initForAutoLayout];
         _filterSortBar.delegate = self;
-        [_filterSortBar.showFilterViewButton addTarget:self action:@selector(showFilterViewButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+        [_filterSortBar.showFilterSortViewButton addTarget:self action:@selector(showFilterSortViewButtonPressed) forControlEvents:UIControlEventTouchUpInside];
     }
     return _filterSortBar;
 }
 
-- (ROFilterView *)filterView
+- (ROFilterSortView *)filterSortView
 {
-    if (!_filterView) {
-        _filterView = [[ROFilterView alloc] initForAutoLayout];
-        _filterView.collectionView.delegate = self;
-        _filterView.collectionView.dataSource = self;
-        [_filterView.segmentedControl addTarget:self action:@selector(segmentChanged) forControlEvents:UIControlEventValueChanged];
-        [_filterView.applyFiltersButton addTarget:self action:@selector(applyFilters) forControlEvents:UIControlEventTouchUpInside];
+    if (!_filterSortView) {
+        _filterSortView = [[ROFilterSortView alloc] initForAutoLayout];
+        _filterSortView.collectionView.delegate = self;
+        _filterSortView.collectionView.dataSource = self;
+        [_filterSortView.segmentedControl addTarget:self action:@selector(segmentChanged) forControlEvents:UIControlEventValueChanged];
+        [_filterSortView.applyFiltersButton addTarget:self action:@selector(applyFilters) forControlEvents:UIControlEventTouchUpInside];
     }
     
-    return _filterView;
+    return _filterSortView;
 }
 
 @end

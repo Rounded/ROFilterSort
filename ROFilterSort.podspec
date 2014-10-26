@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.version          = "1.0.0"
   s.summary          = "ROFilterSort includes a filter bar and popup view to sort / filter various options on the screen."
   s.description      = <<-DESC
-                       ROFilterSort is an easy-to-use framework that allows users to filter a given screen via a segment control and filter buttons. The ROFilterBar shows the currently selected filters, and launching the ROFilterView displays the different filters that can be applied. 
+                       ROFilterSort is an easy-to-use framework that allows users to filter a given screen via a segment control and filter buttons. The ROFilterBar shows the currently selected filters, and launching the ROFilterSortView displays the different filters that can be applied. 
                        DESC
   s.homepage         = "https://github.com/Rounded/ROFilterSort"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"

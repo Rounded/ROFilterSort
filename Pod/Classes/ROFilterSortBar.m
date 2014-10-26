@@ -9,6 +9,7 @@
 #import "ROFilterSortBar.h"
 #import "ROFilterSort.h"
 #import <POP.h>
+#import <PureLayout.h>
 
 @interface ROFilterSortBar ()
 
@@ -32,13 +33,13 @@
 {
     self.backgroundColor = [UIColor lightGrayColor];
     
-    [self addSubview:self.showFilterViewButton];
+    [self addSubview:self.showFilterSortViewButton];
     [self addSubview:self.scrollView];
     
-    [self.showFilterViewButton autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeLeft];
+    [self.showFilterSortViewButton autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsZero excludingEdge:ALEdgeLeft];
 
     [self.scrollView autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(0, 0, 0, 0) excludingEdge:ALEdgeRight];
-    [self.scrollView autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self.showFilterViewButton withOffset:-10];
+    [self.scrollView autoPinEdge:ALEdgeRight toEdge:ALEdgeLeft ofView:self.showFilterSortViewButton withOffset:-10];
 }
 
 - (void)refresh
@@ -119,16 +120,16 @@
 
 #pragma mark - Getters
 
-- (UIButton *)showFilterViewButton
+- (UIButton *)showFilterSortViewButton
 {
-    if (!_showFilterViewButton) {
-        _showFilterViewButton = [[UIButton alloc] initForAutoLayout];
-        [_showFilterViewButton setBackgroundColor:[UIColor blackColor]];
-        [_showFilterViewButton setTitle:@"Launch Filter" forState:UIControlStateNormal];
-        [_showFilterViewButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    if (!_showFilterSortViewButton) {
+        _showFilterSortViewButton = [[UIButton alloc] initForAutoLayout];
+        [_showFilterSortViewButton setBackgroundColor:[UIColor blackColor]];
+        [_showFilterSortViewButton setTitle:@"Launch Filter" forState:UIControlStateNormal];
+        [_showFilterSortViewButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     }
     
-    return _showFilterViewButton;
+    return _showFilterSortViewButton;
 }
 
 - (NSMutableArray *)constraints

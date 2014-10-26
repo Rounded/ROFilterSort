@@ -13,7 +13,7 @@
 
 @interface ROFilterSortBar : UIView
 
-@property (strong, nonatomic) UIButton *showFilterViewButton;
+@property (strong, nonatomic) UIButton *showFilterSortViewButton;
 @property (nonatomic, assign) id <ROFilterSortBarDelegate> delegate;
 @property (strong, nonatomic) UIScrollView *scrollView;
 

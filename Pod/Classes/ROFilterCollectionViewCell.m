@@ -7,7 +7,7 @@
 //
 
 #import "ROFilterCollectionViewCell.h"
-#import "PureLayout.h"
+#import <PureLayout.h>
 
 @implementation ROFilterCollectionViewCell
 
