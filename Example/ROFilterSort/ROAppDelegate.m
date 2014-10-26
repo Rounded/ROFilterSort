@@ -12,7 +12,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    NSLog(@"%@", [[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"ROFilterSort.bundle"]);
     // Override point for customization after application launch.
     return YES;
 }

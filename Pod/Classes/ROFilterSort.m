@@ -69,8 +69,11 @@
 {
     ROFilterCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"FilterCollectionViewCell" forIndexPath:indexPath];
     
+    NSString *bundlePath = [[NSBundle mainBundle].bundlePath stringByAppendingPathComponent:@"ROFilterSort.bundle"];
+    NSBundle *bundle = [NSBundle bundleWithPath:bundlePath];
+    
     cell.titleLabel.text = self.filterButtonTitles[indexPath.row];
-    cell.checkBox.image = [self.filterButtonSelectedIndexesTemp containsIndex:indexPath.row] ? [UIImage imageNamed:@"ROFilterSort.bundle/checked"] : [UIImage imageNamed:@"ROFilterSort.bundle/unchecked"];
+    cell.checkBox.image = [self.filterButtonSelectedIndexesTemp containsIndex:indexPath.row] ? [UIImage imageNamed:@"checked.png" inBundle:bundle compatibleWithTraitCollection:nil] : [UIImage imageNamed:@"ROFilterSort.bundle/unchecked"];
     
     cell.checkBox.alpha = self.disableFilterButtons==1 ? 0.4 : 1.0;
     cell.titleLabel.alpha = self.disableFilterButtons==1 ? 0.4 : 1.0;
