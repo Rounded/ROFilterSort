@@ -45,7 +45,7 @@
 - (void)refresh
 {
     if (self.filterBarLabels.count == 0) {
-        [((ROFilter *)self.delegate).filterButtonTitles enumerateObjectsUsingBlock:^(NSString *filterButtonTitle, NSUInteger idx, BOOL *stop) {
+        [((ROFilterSort *)self.delegate).filterButtonTitles enumerateObjectsUsingBlock:^(NSString *filterButtonTitle, NSUInteger idx, BOOL *stop) {
 
             UILabel *label = [[UILabel alloc] initForAutoLayout];
             label.text = [NSString stringWithFormat:@" %@ ", filterButtonTitle]; // whoa this is a hack! ill get to fixing it
@@ -67,8 +67,8 @@
         }];
     }
     
-    [((ROFilter *)self.delegate).filterButtonTitles enumerateObjectsUsingBlock:^(NSString *filterButtonTitle, NSUInteger idx, BOOL *stop) {
-        if ([((ROFilter *)self.delegate).filterButtonSelectedIndexes containsIndex:idx]) {
+    [((ROFilterSort *)self.delegate).filterButtonTitles enumerateObjectsUsingBlock:^(NSString *filterButtonTitle, NSUInteger idx, BOOL *stop) {
+        if ([((ROFilterSort *)self.delegate).filterButtonSelectedIndexes containsIndex:idx]) {
             // We're showing a label in the bar!
             if (((UILabel *)[self.filterBarLabels objectAtIndex:idx]).alpha == 0) {
                 POPBasicAnimation *animation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayoutConstraintConstant];

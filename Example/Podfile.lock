@@ -1,5 +1,9 @@
 PODS:
-  - ROFilterSort (0.1.0)
+  - pop (1.0.7)
+  - PureLayout (2.0.1)
+  - ROFilterSort (1.0.0):
+    - pop
+    - PureLayout
 
 DEPENDENCIES:
   - ROFilterSort (from `../`)
@@ -9,6 +13,8 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ROFilterSort: a639a3e28f72fcf0cbe079b0338726c6524314da
+  pop: 2f14a1ea61339767af9e66741b418c831b3844df
+  PureLayout: 12eca5b6dc94f1a03fdf255d640604584ff1b55b
+  ROFilterSort: 681575caf51caac8e393f22fd4b57719bf32389b
 
 COCOAPODS: 0.34.4

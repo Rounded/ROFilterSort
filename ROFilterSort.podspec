@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint ROFilterSort.podspec' to ensure this is a
+# Be sure to run `pod lib lint ROCardToss.podspec' to ensure this is a
 # valid spec and remove all comments before submitting the spec.
 #
 # Any lines starting with a # are optional, but encouraged
@@ -19,18 +19,19 @@ Pod::Spec.new do |s|
   s.license          = 'MIT'
   s.author           = { "Brian Weinreich" => "bw@roundedco.com" }
   s.source           = { :git => "https://github.com/Rounded/ROFilterSort.git", :tag => s.version.to_s }
-  s.social_media_url = 'https://twitter.com/roundedco'
+  s.social_media_url = "https://twitter.com/roundedco"
+
   s.platform     = :ios, '7.0'
   s.requires_arc = true
+
   s.source_files = 'Pod/Classes'
   s.resource_bundles = {
-    'ROFilterSort' => ['Pod/Assets/*.png']
+    'ROCardToss' => ['Pod/Assets/*.png']
   }
 
-  s.dependency 'PureLayout'
   s.dependency 'pop'
+  s.dependency 'PureLayout'
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
