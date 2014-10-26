@@ -1,6 +1,6 @@
 # ROFilterSort
 
-[![CI Status](http://img.shields.io/travis/Brian Weinreich/ROFilterSort.svg?style=flat)](https://travis-ci.org/Brian Weinreich/ROFilterSort)
+[![CI Status](http://img.shields.io/travis/Rounded/ROFilterSort.svg?style=flat)](https://travis-ci.org/Rounded/ROFilterSort)
 [![Version](https://img.shields.io/cocoapods/v/ROFilterSort.svg?style=flat)](http://cocoadocs.org/docsets/ROFilterSort)
 [![License](https://img.shields.io/cocoapods/l/ROFilterSort.svg?style=flat)](http://cocoadocs.org/docsets/ROFilterSort)
 [![Platform](https://img.shields.io/cocoapods/p/ROFilterSort.svg?style=flat)](http://cocoadocs.org/docsets/ROFilterSort)
